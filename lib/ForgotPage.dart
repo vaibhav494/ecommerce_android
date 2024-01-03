@@ -4,7 +4,15 @@ class ForgotPage extends StatefulWidget {
   @override
   _ForgotPageState createState() => _ForgotPageState();
 }
+//mail popup
+final myController = TextEditingController();
 class _ForgotPageState extends State<ForgotPage> {
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -24,6 +32,7 @@ class _ForgotPageState extends State<ForgotPage> {
                 child: SizedBox(
                   width: 300,
                   child: TextField(
+                    controller: myController,
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.mail),
                       labelText: 'Enter your registered email',
@@ -64,7 +73,7 @@ showAlertDialog(BuildContext context) {
   // Create AlertDialog
   AlertDialog alert = AlertDialog(
     title: Text("Done"),
-    content: Text("You have received a mail, pls check."),
+    content: Text("you will receive a mail on ${myController.text} ,please verify and update your password"),
     actions: [
       okButton,
     ],
