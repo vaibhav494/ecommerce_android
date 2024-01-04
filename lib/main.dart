@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR FIRST PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR SECOND PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR THIRD PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
@@ -163,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR FOURTH PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
@@ -196,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR FIFTH PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR SIXTH PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
@@ -262,7 +262,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR SEVENTH PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
@@ -295,7 +295,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //ROW FOR EIGHTH PRODUCT (IMAGE + DETAILS)
               Row(
                 //margin: const EdgeInsets.fromLTRB(20, 100, 20, 20),
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //image container
                   Container(
