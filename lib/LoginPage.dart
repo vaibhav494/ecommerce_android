@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:main_ecommerce/ForgotPage.dart';
+import 'package:main_ecommerce/ProductPage.dart';
 import 'package:main_ecommerce/main.dart';
 import 'package:main_ecommerce/RegisterPage.dart';
 class LoginPage extends StatefulWidget {
@@ -108,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => MyHomePage()),
+                            MaterialPageRoute(builder: (context) => ProductPage()),
                           );
                         },
                         child: Text('Submit'),
