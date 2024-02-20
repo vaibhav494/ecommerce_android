@@ -6,7 +6,7 @@ import 'package:main_ecommerce/LoginPage.dart';
 import 'package:main_ecommerce/ProductPage.dart';
 import 'package:main_ecommerce/demo.dart';
 import 'package:main_ecommerce/ForgotPage.dart';
-
+//hello world
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
