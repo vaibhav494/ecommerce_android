@@ -70,7 +70,6 @@ class _ForgotPageState extends State<ForgotPage> {
       print('Error resetting password: $e');
     }
   }
-
   void showAlertDialog(BuildContext context) {
     Widget okButton = FloatingActionButton(
       child: Text("OK"),
