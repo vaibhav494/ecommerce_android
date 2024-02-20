@@ -1,10 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:main_ecommerce/LoginPage.dart';
 import 'package:main_ecommerce/ProductPage.dart';
 import 'package:main_ecommerce/demo.dart';
 import 'package:main_ecommerce/ForgotPage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MyApp());
 }
 
@@ -17,10 +22,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: StreamBuilder<User?>(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return ProductPage();
+          } else {
+            return LoginPage();
+          }
+        },
+      ),
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   @override

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:main_ecommerce/ForgotPage.dart';
 import 'package:main_ecommerce/ProductPage.dart';
@@ -8,6 +9,18 @@ class LoginPage extends StatefulWidget {
   _LoginPageState createState() => _LoginPageState();
 }
 class _LoginPageState extends State<LoginPage> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void dispose(){
+    emailController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+  }
+
+
   bool passenable = true;
   @override
   Widget build(BuildContext context){
@@ -44,6 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: SizedBox(
                         width: 300,
                         child: TextField(
+                          controller: emailController,
                           decoration: InputDecoration(
                             prefixIcon: Icon(Icons.person),
                             labelText: 'Enter Name',
@@ -58,6 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: SizedBox(
                         width: 300,
                         child: TextField(
+                          controller: passwordController,
                           obscureText: passenable,
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.password),
@@ -106,12 +121,12 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       margin: const EdgeInsets.only(top: 30),
                       child:ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
+                        onPressed:
+                          signIn,
+                          /*Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => ProductPage()),
-                          );
-                        },
+                          );*/
                         child: Text('Submit'),
                       ),
                     ),
@@ -122,6 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                         width: 150,
                         child: ElevatedButton(
                           onPressed: () {
+
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => RegisterPage()),
@@ -144,5 +160,15 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
+  }
+  Future signIn() async{
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text.trim(),
+      );
+    } on FirebaseAuthException catch(e){
+        print(e);
+    }
   }
 }
