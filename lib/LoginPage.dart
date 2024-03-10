@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:main_ecommerce/ForgotPage.dart';
-import 'package:main_ecommerce/ProductPage.dart';
-import 'package:main_ecommerce/main.dart';
 import 'package:main_ecommerce/RegisterPage.dart';
 class LoginPage extends StatefulWidget {
   @override
@@ -19,7 +17,6 @@ class _LoginPageState extends State<LoginPage> {
 
     super.dispose();
   }
-
 
   bool passenable = true;
   @override
@@ -131,6 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
 
+                    //signup button
                     Container(
                       margin: const EdgeInsets.only(top: 30),
                       child:SizedBox(
@@ -147,19 +145,14 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     )
-
-
-
                   ],
                 ),
               ),
-
             ],
           ),
         ),
       ),
     );
-
   }
   Future signIn() async{
     try {

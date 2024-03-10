@@ -70,10 +70,12 @@ class _ProductPage extends State<ProductPage> {
         title: Text('Product Page'),
       ),
       body: Padding(
+
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
+
                 Row(
                   //used for search
                   children: [

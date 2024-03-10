@@ -4,9 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:main_ecommerce/LoginPage.dart';
 import 'package:main_ecommerce/ProductPage.dart';
-import 'package:main_ecommerce/demo.dart';
-import 'package:main_ecommerce/ForgotPage.dart';
-//hello world
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -36,7 +34,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
+/*
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -341,7 +339,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
                 ],
               ),
-              // Display search results here (ListView, GridView, etc.)
             ],
           ),
         ),
@@ -349,3 +346,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
